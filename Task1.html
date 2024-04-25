@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #contain {
+        text-align: center;
+      }
+      #square {
+        margin-bottom: 50px;
+        margin-left: 470px;
+        background-color: green;
+        height: 500px;
+        width: 500px;
+        /* border-radius: 0%; */
+        transition: border-radius 0.5s, background-color 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contain">
+      <div id="square"></div>
+      <button onclick="changeShape()">Change Shape</button>
+    </div>
+
+    <script>
+      let toggle = true;
+      function changeShape() {
+        var div = document.getElementById("square");
+
+        if (toggle) {
+          div.style.borderRadius = "50%";
+          div.style.backgroundColor = "blue";
+          toggle = false;
+        } else {
+          div.style.borderRadius = "0%";
+          div.style.backgroundColor = "green";
+          toggle = true;
+        }
+      }
+    </script>
+  </body>
+</html>
